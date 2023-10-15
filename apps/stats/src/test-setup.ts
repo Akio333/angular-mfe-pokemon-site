@@ -6,3 +6,8 @@ globalThis.ngJest = {
   },
 };
 import 'jest-preset-angular/setup-jest';
+
+jest.mock('@angular-architects/module-federation', () => ({
+  __esModule: true,
+  loadRemoteModule: jest.fn(),
+}));
