@@ -1,23 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeroComponent } from './hero/hero.component';
+import { GridComponent } from './grid/grid.component';
+import { SearchComponent } from './search/search.component';
 
 @Component({
   standalone: true,
-  imports: [
-    NxWelcomeComponent,
-    RouterModule,
-    HeaderComponent,
-    FooterComponent,
-    HeroComponent,
-  ],
+  imports: [NxWelcomeComponent, RouterModule, GridComponent, SearchComponent],
   selector: 'pokemon-site-mf-angular-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'home';
+  title = 'collection';
 }
